@@ -1,0 +1,49 @@
+{
+  "checkpointable": false,
+  "name": "biasnet_app",
+  "executionSystem": "tacc.stampede2.ajg718",
+  "executionType": "HPC",
+  "deploymentPath": "apps/ajg718-biasnet-1.0",
+  "deploymentSystem": "tacc.work.ajg718",
+  "helpURI": "https://github.com/theLife10/biasNet",
+  "label": "biasNet",
+  "shortDescription": "fill later",
+  "longDescription": "fill later",
+  "modules": [
+    "load tacc-singularity"
+  ],
+  "ontology": [],
+  "parallelism": "SERIAL",
+  "tags": [],
+  "templatePath": "runner.sh",
+  "testPath": "tester.sh",
+  "version": "1.0",
+  "defaultMaxRunTime": "00:30:00",
+  "inputs": [],
+  "parameters": [
+    {
+      "id": "smiles",
+      "details": {
+        "label": "smiles"
+      },
+      "semantics": {},
+      "value": {
+        "default": "ClC1=CC=C(C=C1)C2=NOC3=C2CCNCC3",
+        "type": "string",
+        "visible": true,
+        "required": true
+      }
+    },
+    {
+      "id": "CONTAINER_IMAGE",
+      "value": {
+        "default": "https://hub.docker.com/r/sirimullalab/biasnet:latest", 
+        "type": "string",
+        "visible": false,
+        "required": true,
+        "order": 1000
+      }
+    }
+  ],
+  "outputs": []
+}
